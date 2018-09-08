@@ -1,0 +1,20 @@
+<h2>Listado de artículos</h2>
+<table class="table table-hover table-bordered">
+	<thead>
+		<th>Título</th>
+		<th>Contenido</th>
+		<th>Acción</th>
+	</thead>
+	<tbody>
+		<tr *ngFor="let articulo of articulos">
+			
+				<td>{{ articulo.titulo }}</td>
+				<td>{{ articulo.contenido }}</td>
+				<td>
+					<a (click)="mostrarArticulo(articulo.id)" class="btn btn-warning">Editar</a>
+					<a (click)="eliminarArticulo(articulo.id)" class="btn btn-danger">Eliminar</a>
+				</td>
+			
+		</tr>
+	</tbody>
+</table>

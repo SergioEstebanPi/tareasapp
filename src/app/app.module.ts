@@ -13,12 +13,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component';
 import { FormsModule } from '@angular/forms';
 import { CrearCuentaComponent } from './crear-cuenta/crear-cuenta.component';
+import { TraerArticulosComponent } from './traer-articulos/traer-articulos.component';
 
 const rutas:Routes=[
   {path:"", component:InicioComponent},
   {path:"inicio", component:InicioComponent},
   {path:"iniciar_sesion", component:IniciarsesionComponent},
   {path:"crear_cuenta", component:CrearCuentaComponent,
+  {path:"traer_articulos", component:TraerArticulosComponent,
   {path:"*", redirectTo:'/', pathMatch:'full'}
 ];
 
@@ -29,7 +31,8 @@ const rutas:Routes=[
     PiedepaginaComponent,
     InicioComponent,
     IniciarsesionComponent,
-    CrearCuentaComponent
+    CrearCuentaComponent,
+    TraerArticulosComponent
   ],
   imports: [
     BrowserModule,
