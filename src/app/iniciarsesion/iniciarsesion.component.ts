@@ -27,7 +27,7 @@ export class IniciarsesionComponent implements OnInit {
   ngOnInit() {
   }
 
-  iniciarSesion(){
+  iniciarSesion(formulario){
   	//console.log(this.formulario);
   	this._usuarios
   		.iniciarSesion(this.formulario)

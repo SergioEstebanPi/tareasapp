@@ -12,11 +12,13 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component';
 import { FormsModule } from '@angular/forms';
+import { CrearCuentaComponent } from './crear-cuenta/crear-cuenta.component';
 
 const rutas:Routes=[
   {path:"", component:InicioComponent},
   {path:"inicio", component:InicioComponent},
   {path:"iniciar_sesion", component:IniciarsesionComponent},
+  {path:"crear_cuenta", component:CrearCuentaComponent,
   {path:"*", redirectTo:'/', pathMatch:'full'}
 ];
 
@@ -26,7 +28,8 @@ const rutas:Routes=[
     CabeceraComponent,
     PiedepaginaComponent,
     InicioComponent,
-    IniciarsesionComponent
+    IniciarsesionComponent,
+    CrearCuentaComponent
   ],
   imports: [
     BrowserModule,

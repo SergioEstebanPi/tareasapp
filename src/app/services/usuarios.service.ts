@@ -22,11 +22,21 @@ export class UsuariosService {
   }
 
   iniciarSesion(autenticacion):Observable<any>{
-  	let urlAutenticacacion = this.url + "/user_token";
+  	let urlAutenticacion = this.url + "/user_token";
   	let parametros = JSON.stringify(autenticacion);
   	return this.http.post<any>(
-  		urlAutenticacacion, 
+  		urlAutenticacion, 
   		parametros, 
+  		this.encabezados
+  	);
+  }
+
+  crearCuenta(usuario):Observable<any>{
+  	let urlCrearCuenta = this.url + "/users";
+  	let parametros = JSON.stringify(usuario);
+  	return this.http.post<any>(
+  		urlCrearCuenta,
+  		parametros,
   		this.encabezados
   	);
   }
