@@ -10,10 +10,13 @@ import { RouterModule, Routes} from '@angular/router';
 import { UsuariosService } from './services/usuarios.service';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { IniciarsesionComponent } from './iniciarsesion/iniciarsesion.component';
+import { FormsModule } from '@angular/forms';
 
 const rutas:Routes=[
   {path:"", component:InicioComponent},
   {path:"inicio", component:InicioComponent},
+  {path:"iniciar_sesion", component:IniciarsesionComponent},
   {path:"*", redirectTo:'/', pathMatch:'full'}
 ];
 
@@ -22,13 +25,15 @@ const rutas:Routes=[
     AppComponent,
     CabeceraComponent,
     PiedepaginaComponent,
-    InicioComponent
+    InicioComponent,
+    IniciarsesionComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(rutas),
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     UsuariosService
