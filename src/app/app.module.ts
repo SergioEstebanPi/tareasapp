@@ -6,6 +6,17 @@ import { CabeceraComponent } from './cabecera/cabecera.component';
 import { PiedepaginaComponent } from './piedepagina/piedepagina.component';
 import { InicioComponent } from './inicio/inicio.component';
 
+import { RouterModule, Routes} from '@angular/router';
+import { UsuariosService } from './services/usuarios.service';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
+const rutas:Routes=[
+  {path:"", component:InicioComponent},
+  {path:"inicio", component:InicioComponent},
+  {path:"*", redirectTo:'/', pathMatch:'full'}
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,9 +25,14 @@ import { InicioComponent } from './inicio/inicio.component';
     InicioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(rutas),
+    HttpModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    UsuariosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

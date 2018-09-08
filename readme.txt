@@ -40,3 +40,11 @@ piedepagina
 inicio
 
 bootstrap CND en aplicacion.html
+
+# solicitud HTTP
+
+en app.module.ts
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+
+en usuarios.service.ts
