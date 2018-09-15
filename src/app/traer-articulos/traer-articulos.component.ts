@@ -34,19 +34,6 @@ export class TraerArticulosComponent implements OnInit {
   		);
   }
 
-  crearArticulo(articulo){
-  	this._articulos.crearArticulo(articulo)
-  		.subscribe(
-  			respuesta => {
-  				console.log(respuesta);
-  				//this.traerArticulos();
-  			},
-  			error => {
-  				console.log(error);
-  			}
-  		);
-  }
-
   eliminarArticulo(id){
   	let confirmacion = confirm("Estas seguro?");
   	if(confirmacion){
