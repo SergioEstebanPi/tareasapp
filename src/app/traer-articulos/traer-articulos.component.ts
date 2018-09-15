@@ -34,19 +34,6 @@ export class TraerArticulosComponent implements OnInit {
   		);
   }
 
-  mostrarArticulo(id){
-  	this._articulos.mostrarArticulo(id)
-  		.subscribe(
-  			respuesta => {
-  				console.log(respuesta);
-  				//this.traerArticulos();
-  			},
-  			error => {
-  				console.log();
-  			}
-  		);
-  }
-
   crearArticulo(articulo){
   	this._articulos.crearArticulo(articulo)
   		.subscribe(
@@ -55,7 +42,7 @@ export class TraerArticulosComponent implements OnInit {
   				//this.traerArticulos();
   			},
   			error => {
-  				console.log();
+  				console.log(error);
   			}
   		);
   }
@@ -70,7 +57,7 @@ export class TraerArticulosComponent implements OnInit {
 	  				this.traerArticulos();
 	  			},
 	  			error => {
-	  				console.log();
+	  				console.log(error);
 	  			}
 	  		);
   	}

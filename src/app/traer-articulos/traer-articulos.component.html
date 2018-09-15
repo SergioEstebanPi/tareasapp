@@ -8,7 +8,11 @@
 	<tbody>
 		<tr *ngFor="let articulo of articulos">
 			
-				<td>{{ articulo.titulo }}</td>
+				<td>
+					<a [routerLink]="['/mostrar_articulo', articulo.id]">
+						{{ articulo.titulo }}
+					</a>
+				</td>
 				<td>{{ articulo.contenido }}</td>
 				<td>
 					<a (click)="mostrarArticulo(articulo.id)" class="btn btn-warning">Editar</a>
