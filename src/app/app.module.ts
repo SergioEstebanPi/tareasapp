@@ -18,6 +18,7 @@ import { TraerArticulosComponent } from './traer-articulos/traer-articulos.compo
 import { SessionGuard } from './guards/session.guard';
 import { MostrarArticuloComponent } from './mostrar-articulo/mostrar-articulo.component';
 import { CrearArticuloComponent } from './crear-articulo/crear-articulo.component';
+import { ModificarArticuloComponent } from './modificar-articulo/modificar-articulo.component';
 
 const rutas:Routes=[
   {path:"", component:InicioComponent},
@@ -36,6 +37,10 @@ const rutas:Routes=[
     component:CrearArticuloComponent,
     canActivate:[SessionGuard]
   },
+  {path:"modificar_articulo/:id", 
+    component:ModificarArticuloComponent,
+    canActivate:[SessionGuard]
+  },
   {path:"*", redirectTo:'/', pathMatch:'full'}
 ];
 
@@ -49,7 +54,8 @@ const rutas:Routes=[
     CrearCuentaComponent,
     TraerArticulosComponent,
     MostrarArticuloComponent,
-    CrearArticuloComponent
+    CrearArticuloComponent,
+    ModificarArticuloComponent
   ],
   imports: [
     BrowserModule,

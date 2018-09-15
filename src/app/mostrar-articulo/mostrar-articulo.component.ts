@@ -12,7 +12,7 @@ export class MostrarArticuloComponent implements OnInit {
 
 	articulo:any;
 
-  constructor(private _articulos:ArticulosService
+  constructor(private _articulos:ArticulosService,
   						private _ruta:ActivatedRoute) {
   	this.articulo = {
   			id: "",

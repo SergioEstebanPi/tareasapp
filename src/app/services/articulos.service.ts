@@ -42,18 +42,20 @@ export class ArticulosService {
 
   /* POST create */
   crearArticulo(articulo){
+  	let params = JSON.stringify(articulo);
   	return this.http.post<any>(
   		this.url,
-  		articulo,
+  		params,
   		this.encabezados
   	);
   }
 
   /* PUT update */
   modificarArticulo(articulo){
+  	let params = JSON.stringify(articulo);
   	return this.http.put<any>(
   		this.url,
-  		articulo,
+  		params,
   		this.encabezados
   	);
   }
